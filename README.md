@@ -28,7 +28,7 @@ I also co-founded **Appetiva**, a small software studio. Our main work so far is
 
 ## Featured projects
 
-### [financas-pessoais](https://github.com/AllanDionizio/financas-pessoais)
+### [personal-finance-analytics](https://github.com/AllanDionizio/personal-finance-analytics)
 An end-to-end analytics engineering project on six years of household finance data. Python ingests the raw spreadsheets, dbt models them into a star schema on DuckDB, and an Evidence dashboard sits on top.
 
 🚧 In progress: replacing the real data with a synthetic dataset, and CI with GitHub Actions.
