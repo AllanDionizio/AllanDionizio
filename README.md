@@ -6,12 +6,7 @@ I've spent the last 7 years working with data. Since 2021 I've been at **PagBank
 
 Over the last couple years I’ve been bringing engineering practices into my analytics work. I mean dbt, tests and version control: the things that make a query you wrote six months ago still trustworthy today. This profile is where I'm putting that into practice.
 
-I also co-founded **Appetiva**, a small software studio. Our main work so far is a management platform for a short-term rental operator:
-
-- **Database-first backend:** PostgreSQL on Supabase, with the business rules in PL/pgSQL RPCs and triggers across versioned migrations.
-- **Ingestion pipeline:** a Python service on Google Cloud Run, triggered by Cloud Scheduler, reads Airbnb booking confirmations through the Gmail API and parses guests, dates, cleaning fees, price adjustments and platform fees.
-- **Safe writes:** parsed bookings land through an upsert RPC as drafts. Incomplete records go to a pending table instead of failing silently, and nothing is confirmed until a person approves it in a review queue.
-- **Front-end:** Next.js 14 and TypeScript, talking directly to Supabase.
+I also co-founded **Appetiva**, a small software studio. Our main work so far is a management platform for a short-term rental operator.
 
 ## What I work with
 
@@ -34,6 +29,11 @@ An end-to-end analytics engineering project on six years of household finance da
 **Live:** [dashboard](https://allandionizio.github.io/personal-finance-analytics/) · [dbt docs](https://allandionizio.github.io/personal-finance-analytics/dbt-docs/)
 
 `Python` · `dbt` · `DuckDB` · `Evidence` · `GitHub Actions`
+
+### [airbnb-booking-pipeline](https://github.com/AllanDionizio/airbnb-booking-pipeline)
+A production data pipeline, rewritten clean-room for publication. It reads Airbnb's booking and cancellation emails from Gmail, parses them, converts USD at the Brazilian central bank's PTAX rate and loads them into Postgres through SQL functions that make every email idempotent. Anything it cannot settle on its own (an unknown listing, a double booking, a cancellation) waits in a review queue for a person instead of being dropped or guessed. Regression fixtures, integration tests against Postgres in CI, a Docker image and four architecture decision records; every email and amount in it is synthetic.
+
+`Python` · `PostgreSQL` · `Gmail API` · `Docker` · `GitHub Actions`
 
 ## Get in touch
 
