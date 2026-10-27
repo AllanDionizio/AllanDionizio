@@ -14,12 +14,12 @@ I also co-founded **Appetiva**, a small software studio. Our main work so far is
 | --- | --- |
 | Modeling & transformation | SQL, dbt, dimensional modeling (Kimball) |
 | Databases & engines | PostgreSQL (PL/pgSQL), DuckDB, Amazon Redshift |
-| Cloud & pipelines | Google Cloud Run, Cloud Scheduler, Gmail API, Supabase |
+| Cloud & pipelines | Google Cloud Run, Cloud Scheduler, Gmail API, Supabase, Docker, GitHub Actions |
 | Languages | SQL, Python, TypeScript |
 | BI & analytics | Power BI, Evidence |
 | Domain | CRM, marketing measurement, customer analytics, fintech, short-term rentals |
 
-**Currently learning:** Airflow, Docker, GitHub Actions.
+**Currently learning:** Airflow.
 
 ## Featured projects
 
